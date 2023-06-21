@@ -6,7 +6,7 @@ import { nanoid } from '@reduxjs/toolkit';
 
 
 export default function NameForm() {
-    const contacts = useSelector(state => state.contacts.data);
+    const contacts = useSelector(state => state.contacts);
 
     const dispatch = useDispatch();
 

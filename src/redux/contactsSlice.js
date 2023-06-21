@@ -4,14 +4,14 @@ const contactsInitialState = [];
 
 const contactsSlice = createSlice({
     name: "contacts",
-    initialState: {data: contactsInitialState},
+    initialState: contactsInitialState,
     reducers: {
         addContact(state, { payload }) {
-        state.data.push(payload);
+        state.push(payload);
         },
         deleteContact(state, { payload }) {
-            const index = state.data.findIndex(contact => contact.id === payload);
-        state.data.splice(index, 1);
+            const index = state.findIndex(contact => contact.id === payload);
+        state.splice(index, 1);
         },
     }
 })
